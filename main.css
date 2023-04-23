@@ -56,29 +56,39 @@
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     display: grid;
-    place-content: center;
+    place-items: center;
     background-color: var(--Light-Grayish-Blue);
+    padding:3rem 2rem;
+  }
+
+  .wrapper{
+    position: relative;
   }
 
   .primary{
+    position: relative;
     display: flex;
-    max-width: 800px;
+    max-width: 900px;
     border-radius: 10px;
     overflow: hidden;
     background-color: white;
 
   }
 
-  .img-drawer{
-    width: 100%;
-    background: url('/images/drawers.jpg')no-repeat;
-    background-size: cover;
-    background-position-x: -25px;
+  .img-drawer img{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    object-fit: cover;
+
   }
+
+ 
 
   .p-txt{
     padding-block: 2rem;
     padding-inline: 3rem;
+    margin-left: calc(63% - 9rem);
   }
 
   .p-head{
@@ -124,17 +134,24 @@
 
   .hover-icon {
     display: flex ;
+    z-index: 1;
     letter-spacing: 4px;
     gap: 1rem;
     justify-content: center;
     width: 16rem;
     background: var(--Very-Dark-Grayish-Blue );
     position: absolute;
-    transform: translateX(-115px) translateY(-80px);
+    transform:  translateY(25px);
     color: #fff;
+    right:-60px;
+    bottom: 125px;
     padding: 1rem;
     text-align: center;
     border-radius: 0.6rem;
+
+  }
+
+  .enable{
     display: none;
 
   }
@@ -146,27 +163,54 @@
     height: 1rem;
     background: var(--Very-Dark-Grayish-Blue );
     position: absolute;
-    bottom: -1rem;
+    bottom: -0.7rem;
     left: calc(50% - 0.5rem);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
   }
 
-  .icon{
+  .icon-holder{
     display: inline-flex;
-    z-index: 2;
-    padding: 1rem;
-    background: url('/images/icon-share.svg') no-repeat;
-    background-position: center;
+    padding: 0.6rem;
     border-radius: 100%;
     background-color: var();
     background-color: var(--Light-Grayish-Blue);
     font-size: 20px;
+    border: none;
     color: var(--Desaturated-Dark-Blue);
     cursor: pointer;
     }
 
-  .icon:hover{ 
-    z-index: 1;
-    color: white;
-    background-color: var(--Desaturated-Dark-Blue);
+    .icon-holder[data-visible="true"]{
+      background: var(--Desaturated-Dark-Blue);
+
+    }
+
+    .svg-toggle{
+      fill:#6E8098;
+    }
+ 
+
+  @media (max-width: 768px) {
+
+    .primary{
+      flex-direction: column;
+      max-width: 400px;
+    }
+
+    .img-drawer img{
+      position: relative;
+      width: 100%;
+    }
+
+    .p-txt{
+      margin-left: 0;
+    }
+
+    .hover-icon{
+      width: 16rem;
+    }
+    
   }
+
+ 
+
