@@ -3,7 +3,7 @@
 ### Screenshot
 <h2>Desktop</h2>
 
-![](./images/Desktop.png)
+![](./images/Desktoppng.png)
 
 <br><br>
 
