@@ -3,13 +3,13 @@
 ### Screenshot
 <h2>Desktop</h2>
 
-![](./images/Desktop.jpg)
+![](./images/Desktop.png)
 
 <br><br>
 
 <h2>Mobile</h2>
 
-![](./images/Mobile.jpg)
+![](./images/Mobile.png)
 
 ### Links
 
